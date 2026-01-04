@@ -48,11 +48,10 @@ export function useSync() {
         await uploadMetadata(primitiveMetadata)
       } catch (e: any) {
         if (e.statusCode !== 506) {
-          toaster("身份校验失败，无法同步，请重新登录", {
+          toaster("Shaxsni tasdiqlash amalga oshmadi, sinxronlashtirib bo'lmadi.，Iltimos, qaytadan tizimga kiring.", {
             type: "error",
             action: {
-              label: "登录",
-              onClick: login,
+              label: " kirish login,
             },
           })
           logout()
@@ -73,10 +72,10 @@ export function useSync() {
         }
       } catch (e: any) {
         if (e.statusCode !== 506) {
-          toaster("身份校验失败，无法同步，请重新登录", {
+          toaster("Shaxsni tasdiqlash amalga oshmadi, sinxronlashtirib bo'lmadi，Iltimos, qaytadan tizimga kiring.", {
             type: "error",
             action: {
-              label: "登录",
+              label: "Tizimga kirish",
               onClick: login,
             },
           })
