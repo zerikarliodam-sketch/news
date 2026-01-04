@@ -19,7 +19,7 @@ export const originSources = {
     home: "https://v2ex.com/",
     sub: {
       share: {
-        title: "So'nggi ulashish",
+        title: "So'nggi ulashilgan",
         column: "tech",
       },
     },
@@ -118,7 +118,7 @@ export const originSources = {
     name: "Hupu",
     home: "https://hupu.com",
     column: "china",
-    title: "Asosiy yo'lning eng mashhur postlari",
+    title: "Popular news ",
     type: "hottest",
     color: "red",
   },
@@ -131,7 +131,7 @@ export const originSources = {
     home: "https://tieba.baidu.com",
   },
   "toutiao": {
-    name: "Bugungi yangiliklar sarlavhalari",
+    name: "Bugungi yangiliklar",
     type: "hottest",
     column: "china",
     color: "red",
