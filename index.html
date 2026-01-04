@@ -62,6 +62,57 @@
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.tsx"></script>
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+    // Vidjetni sozlash
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'zh-CN', // Saytning asl tili: Xitoycha
+            includedLanguages: 'uz', // Faqat O'zbek tiliga ruxsat berish
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    // Avtomatik ravishda O'zbek tilini tanlash funksiyasi
+    function autoTranslateToUzbek() {
+        var checkComboBox = setInterval(function() {
+            var combo = document.querySelector('.goog-te-combo');
+            if (combo) {
+                combo.value = 'uz'; // O'zbek tilini tanlash
+                combo.dispatchEvent(new Event('change')); // O'zgarishni ishga tushirish
+                clearInterval(checkComboBox); // To'xtatish
+            }
+        }, 500); // Har yarim soniyada tekshiradi
+    }
+
+    // Sahifa yuklanganda ishga tushirish
+    window.addEventListener('load', autoTranslateToUzbek);
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>
+    /* Yuqoridagi Google bannerini yashirish */
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
+    /* Google logotipini va matnini yashirish (ixtiyoriy) */
+    .goog-te-gadget {
+        font-size: 0px !important;
+    }
+    .goog-te-gadget span {
+        display: none !important;
+    }
+    /* Tarjima qilingan elementlardagi ramkani olib tashlash */
+    .goog-text-highlight {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+</style>
 </body>
 
 </html>
