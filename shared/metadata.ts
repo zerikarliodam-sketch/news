@@ -16,13 +16,13 @@ export const columns = {
     zh: "Moliya",
   },
   focus: {
-    zh: "ga diqqatni jalb etish",
+    zh: "VIEW",
   },
   realtime: {
-    zh: "hozir",
+    zh: "GLOBAL",
   },
   hottest: {
-    zh: "Yangi",
+    zh: "NEWS",
   },
 } as const
 
