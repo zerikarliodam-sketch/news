@@ -5,17 +5,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/icon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO Meta Tags -->
   <meta name="description" content="NewsNow - 实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
   <meta name="keywords" content="新闻,科技新闻,实时新闻,新闻聚合,NewsNow" />
   <meta name="author" content="NewsNow" />
   <meta name="robots" content="index, follow" />
 
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="NewsNow - 优雅的新闻聚合阅读器" />
   <meta property="og:description" content="实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://newsnow.busiyi.world" />
   <meta property="og:image" content="https://newsnow.busiyi.world/og-image.png" />
 
+  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NewsNow - 优雅的新闻聚合阅读器" />
   <meta name="twitter:description" content="实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验" />
@@ -25,23 +28,18 @@
   <link rel="preload" href="/Baloo2-Bold.subset.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 
-  <style>
-    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
-    body { top: 0px !important; }
-    .goog-te-gadget { font-size: 0px !important; }
-    #google_translate_element { display: none; }
-  </style>
-
+  <!-- Schema.org markup for Google -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "NewsNow",
       "url": "https://newsnow.busiyi.world",
-      "description": "实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验"
+      "description": "实时新闻聚合阅读器，汇集全球热点新闻，提供优雅的阅读体验",
     }
   </script>
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL9HHYE5LC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -63,37 +61,6 @@
 
 <body>
   <div id="app"></div>
-  
-  <div id="google_translate_element"></div>
-
-  <script type="text/javascript">
-    // 1. Vidjetni sozlash
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'zh-CN',
-        includedLanguages: 'uz',
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-
-    // 2. Avtomatik tarjimani ishga tushirish
-    function autoTranslate() {
-      const checkInterval = setInterval(() => {
-        const combo = document.querySelector('.goog-te-combo');
-        if (combo) {
-          combo.value = 'uz';
-          combo.dispatchEvent(new Event('change'));
-          clearInterval(checkInterval);
-        }
-      }, 500);
-      setTimeout(() => clearInterval(checkInterval), 10000); // 10 soniyadan keyin to'xtatish
-    }
-
-    window.addEventListener('load', autoTranslate);
-  </script>
-
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
